@@ -111,7 +111,6 @@ margin: 1em 0 2em;
 line-height: 1.6;
 }
 span {
-border-bottom: 2px #11999E solid;
 font-weight: 700;
 }
 b {
@@ -139,6 +138,7 @@ aside {
     position: absolute;
     bottom: 0;
     right: 0;
+    text-align: right;
 }
 footer {
 display: block;
@@ -147,6 +147,10 @@ width: 100%;
 margin: 5em 0 0;
 padding: 0 0 2em;
 overflow: hidden;
+}
+footer a {
+    margin: 0 25px 0;
+    padding: 5px 0 0;
 }
 abbr[title], acronym[title] {
 text-decoration: none;
@@ -224,16 +228,27 @@ width: 60%;
 margin: 5% 5% 10%;
 float: left;
 }
+#zen-supporting p {
+    text-align: justify;
+}
 .wrapper {
     bottom: 0;
 }
 .design-selection, .design-archives, .zen-resources {
     margin: 5em 0 2em;
 }
-.design-selection h3, .design-archives h3, .zen-resources h3 {
-    font-size: 3em;
+aside h3 {
+        font-size: 1.5em;
+    text-transform: uppercase;
+    font-variant: small-caps;
+    font-family: inherit;
+    font-weight: bold;
 }
-
+aside a, footer a {
+    color: #11999E;
+    font-weight: normal;
+    border-bottom-width: 1px;
+}
 aside ul li {
     margin: 1em 0;
     line-height: 1.5;
