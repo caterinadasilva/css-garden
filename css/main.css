@@ -21,6 +21,7 @@ border: 0;
 font-size: 100%;
 font: inherit;
 vertical-align: baseline;
+transition: .5s ease all;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -31,6 +32,7 @@ body {
 line-height: 1;
 font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 background-color: #F3F6F6;
+color: #40514E;
 }
 ol, ul {
 list-style: none;
@@ -49,36 +51,52 @@ border-spacing: 0;
 }
 
 /* ESTILOS */
+
 header {
-    background-image: url(../img/bg2.jpg);
-    color: white;
-    padding: 10em 5em 2em;
-    text-align: left;
-    background-color: #40514E;
-    background-blend-mode: difference;
-    background-attachment: fixed;
-    min-height: 20em;
-    background-position: top center;
-    background-repeat: no-repeat;
-    position: relative;
+color: white;
+text-align: center;
+min-height: 30em;
+position: relative;
+background: -webkit-linear-gradient(bottom, rgb(48, 227, 202), rgb(17, 153, 158));
+background: -o-linear-gradient(bottom, rgb(48, 227, 202), rgb(17, 153, 158));
+background: linear-gradient(to top, rgb(48, 227, 202), rgb(17, 153, 158));
+height: 100vh;
 }
 h1, h2, h3, h4, h5, h6 {
 font-family: 'Tangerine', cursive;
 }
 h1 {
-font-size: 5rem;
+font-size: 7rem;
 }
 h2 {
 font-size: 3.5rem;
 }
 h3 {
-color: #11999E;
-margin: 3em 0 1em;
-font-size: 1.5rem;
+font-size: 5rem;
 }
 h4 {
+font-size: 2.5rem;
+}
+h5 {
+font-size: 2rem;
+}
+h6 {
 font-size: 1.5rem;
-text-align: left;
+}
+header h1 {
+padding: 30vh 0 0;
+}
+header h1:before {
+    content: "";
+    display: block;
+    background: url(../img/lotus.png) no-repeat;
+    width: 128px;
+    height: 128px;
+    margin: 0 auto;
+    position: absolute;
+    top: 13vh;
+    left: 0;
+    right: 0;
 }
 label {
 display: block;
@@ -89,8 +107,8 @@ float: left;
 }
 p {
 display: block;
-margin: 1em 0;
-line-height: 1.4;
+margin: 1em 0 2em;
+line-height: 1.6;
 }
 span {
 border-bottom: 2px #11999E solid;
@@ -104,8 +122,23 @@ small {
 font-size: .8rem;
 }
 a {
-	color: #30E3CA;
-	font-weight: bold;
+color: #30E3CA;
+font-weight: bold;
+border-bottom: 2px solid;
+    text-decoration: none;
+    transition: .5s ease all;
+}
+a:hover, a:focus, a:active{
+	transition: .5s ease all;
+	border-bottom: 4px solid;
+
+}
+aside {
+    width: 28%;
+    margin: 15% 2% 15% 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 footer {
 display: block;
@@ -116,8 +149,92 @@ padding: 0 0 2em;
 overflow: hidden;
 }
 abbr[title], acronym[title] {
-    text-decoration: none;
-    text-transform: lowercase;
-    font-variant: small-caps;
-    font-size: 125%;
+text-decoration: none;
+text-transform: lowercase;
+font-variant: small-caps;
+font-size: 125%;
+}
+/* SECTIONS */
+.page-wrapper {
+	overflow: hidden;
+	position: relative;
+}
+.page-wrapper:after {
+    content: "Desarrollado por Caterina Da Silva";
+    font-size: 80%;
+    position: absolute;
+	bottom: 5em;
+	right: 0;
+	left: 0;
+	color: #11999E;
+	text-align: center;
+}
+.main h3 {
+    margin: 2em 0 .5em;
+    color: #11999E;
+}
+#zen-intro {
+position: relative;
+text-align: center;
+color: #fff;
+}
+.intro p {
+    padding: 1vh 15%;
+    font-weight: bold;
+    font-size: 120%;
+}
+.intro a {
+	color: #11999E;
+}
+.summary {
+    position: absolute;
+    top: 60vh;
+    right: 0;
+    color: #fff;
+    margin: 0 auto;
+    left: 0;
+}
+.preamble{
+background: -webkit-linear-gradient(180deg, rgb(48, 227, 202), rgb(243, 246, 246));
+background: linear-gradient(180deg, rgb(48, 227, 202), rgb(243, 246, 246));
+height: 100vh;
+}
+.preamble h3 {
+	position: relative;
+    padding: 20vh 0 5vh;
+}
+.preamble h3:before {
+    content: "";
+    display: block;
+    background: url(../img/buddha.png) no-repeat;
+    width: 128px;
+    height: 128px;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+#zen-explanation h3 {
+	margin-top: 0;
+}
+#zen-supporting {
+display: block;
+width: 60%;
+margin: 5% 5% 10%;
+float: left;
+}
+.wrapper {
+    bottom: 0;
+}
+.design-selection, .design-archives, .zen-resources {
+    margin: 5em 0 2em;
+}
+.design-selection h3, .design-archives h3, .zen-resources h3 {
+    font-size: 3em;
+}
+
+aside ul li {
+    margin: 1em 0;
+    line-height: 1.5;
 }
